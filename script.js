@@ -13,10 +13,12 @@ inputs.forEach((element) => {
         let currentInput = e.target;
         // UZIMAMO VRIJEDNOST ONO ŠTO JE KORISNIK UNIO
         let inputValue = currentInput.value;
+        // UZIMAMO NAME OD TOG ELEMENTA KAKO BI BAŠ NJEMU DODIJELILI ERROR
         let inputName = currentInput.getAttribute('name');
 
         if (inputValue.length > 4) {
 
+            // ISPRAZNIMO POLJE SA GREŠKAMA PRIJE PROVJERE 
             errors[inputName] = [];
             switch (inputName) {
                 case 'ime_prezime':
